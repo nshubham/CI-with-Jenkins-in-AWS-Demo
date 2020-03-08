@@ -3,7 +3,7 @@ pipeline {
     environment {
         PROJECT_ID = 'devops-learning-265821'
         CLUSTER_NAME = 'k8s-cluster'
-        LOCATION = 'us-central1-a'
+        LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'Kubernetes'
     }
     stages {
