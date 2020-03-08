@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'kubernetes-proj'
         CLUSTER_NAME = 'kubernetes-cluster'
         LOCATION = 'us-central1-a'
-        CREDENTIALS_ID = 'kubernetes'
+        CREDENTIALS_ID = 'Kubernetes'
     }
     stages {
         stage("Checkout code") {
