@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webapp1
-        image: naugraiyashubham/k8s:tagversion
+        image: gcr.io/devops-learning-265821/naugraiyashubham/k8s:tagversion
         ports:
         - containerPort: 8080
 ---
