@@ -27,15 +27,18 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("naugraiyashubham/k8s:${env.BUILD_ID}")
+                    //myapp = docker.build("naugraiyashubham/k8s:${env.BUILD_ID}")
+			myapp=docker.build("gcr.io/devops-learning-265821/naugraiyashubham/k8s:${env.BUILD_ID}")
                 }
             }
         }
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'Docker-hub-credentials') {
-                            myapp.push("${env.BUILD_ID}")
+                    //docker.withRegistry('https://registry.hub.docker.com', 'Docker-hub-credentials') {
+                           // myapp.push("${env.BUILD_ID}")
+			docker.withRegistry('https://gcr.io', 'gcr:GCR_Credential') {
+				myapp.push("${env.BUILD_ID}")
                     }
                 }
             }
